@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KangGhosting - Keranjang</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      background-color: #f0f4f8;
+    }
+    h1 {
+      text-align: center;
+      color: #d0005c;
+    }
+    .product {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      margin: 20px auto;
+      text-align: center;
+    }
+    .btn {
+      background-color: #d0005c;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    .cart-count {
+      background: red;
+      color: white;
+      border-radius: 50%;
+      padding: 5px 10px;
+      position: absolute;
+      top: 5px;
+      right: 10px;
+    }
+    #cart-icon {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      font-size: 24px;
+      background: #d0005c;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="cart-icon">🛒 <span id="cart-count">0</span></div>
+
+  <h1>KangGhosting - Produk</h1>
+
+  <div class="product">
+    <h2>Kaos Ghosting</h2>
+    <p>Rp 99.000</p>
+    <button class="btn" onclick="tambahKeKeranjang()">+ Tambah ke Keranjang</button>
+  </div>
+
+  <script>
+    let count = 0;
+    function tambahKeKeranjang() {
+      count++;
+      document.getElementById("cart-count").innerText = count;
+    }
+  </script>
+
+</body>
+</html>
